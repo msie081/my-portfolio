@@ -7,9 +7,9 @@ const techStack: string[] = [
   "SQL",
 ];
 
-export default function TechStack() {
+export default function Skills() {
   return (
-    <section className="py-24 px-6 max-w-5xl mx-auto">
+    <section id="skills" className="py-24 px-6 max-w-5xl mx-auto">
       <h2 className="text-3xl font-bold mb-10">Tech Stack</h2>
 
       <div className="flex flex-wrap gap-3 mb-16">
