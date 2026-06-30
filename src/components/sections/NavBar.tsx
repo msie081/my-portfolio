@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ModeToggle } from "../mode-toggle";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -74,6 +75,10 @@ export default function Navbar() {
             <a href="#contact" className={linkClass("contact")}>
               Contact
             </a>
+
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <ModeToggle />
           </NavigationMenuItem>
 
         </NavigationMenuList>

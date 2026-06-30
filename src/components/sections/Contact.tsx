@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { Check, Copy,  ArrowUp } from "lucide-react";
+import GithubIcon from "../icons/GithubIcon";
+import LinkedinIcon from "../icons/LinkedinIcon";
 
 export default function Contact() {
 
@@ -30,68 +33,46 @@ export default function Contact() {
 
       {/* Email Box */}
       <div className="flex justify-center mb-8">
-        <button
-          onClick={copyEmail}
-          className="flex items-center gap-3 px-4 py-2 border rounded-lg hover:bg-muted transition cursor-pointer"
-          title="Click to copy email"
-        >
+      <button
+        onClick={copyEmail}
+        className="flex items-center gap-3 px-4 py-2 border rounded-lg hover:bg-muted transition cursor-pointer"
+        title="Click to copy email"
+      >
+        <span className="text-sm text-muted-foreground">{email}</span>
 
-          {/* Email text */}
-          <span className="text-sm text-muted-foreground">
-            {email}
-          </span>
-
-          {/* Icon */}
-          {copied ? (
-            <img
-              src="/icons/copy-check.svg"
-              alt="Copied"
-              className="w-5 h-5"
-            />
-          ) : (
-            <img
-              src="/icons/copy.svg"
-              alt="Copy"
-              className="w-5 h-5"
-            />
-          )}
-
-        </button>
-      </div>
+        {copied ? (
+          <Check className="w-5 h-5 text-green-500" />
+        ) : (
+          <Copy className="w-5 h-5 text-muted-foreground" />
+        )}
+      </button>
+    </div>
 
       {/* Social Buttons */}
       <div className="flex justify-center gap-4 mb-12">
 
-        {/* GitHub */}
-        <a
-          href="http://github.com/msie081"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm font-medium hover:bg-muted transition"
-        >
-          <img
-            src="/icons/github.svg"
-            alt="GitHub"
-            className="w-5 h-5"
-          />
-        </a>
+          {/* GitHub */}
+          <a
+            href="http://github.com/msie081"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-muted transition text-muted-foreground hover:text-primary"
+          >
+            <GithubIcon size={20} />
+          </a>
 
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/in/melissa-sieu"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm font-medium hover:bg-muted transition"
-        >
-          <img
-            src="/icons/linkedin.svg"
-            alt="LinkedIn"
-            className="w-5 h-5"
-          />
-        </a>
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/melissa-sieu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-muted transition text-muted-foreground hover:text-primary"
+          >
+            <LinkedinIcon size={20} />
+          </a>
 
-        
-      </div>
+        </div>
+
         <div className="flex justify-center">
         <Button
           variant="secondary"
@@ -100,11 +81,7 @@ export default function Contact() {
         >
           Back to top
 
-          <img
-            src="/icons/arrow-up.svg"
-            alt=""
-            className="w-4 h-4 transition-transform duration-200 group-hover:-translate-y-0.5"
-          />
+          <ArrowUp className="w-4 h-4 transition-transform duration-200 group-hover:-translate-y-0.5" />
         </Button>
       </div>
         
