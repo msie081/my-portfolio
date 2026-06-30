@@ -1,5 +1,3 @@
-import React from "react";
-
 const GithubIcon = ({
   size = 20,
   color = "currentColor",
