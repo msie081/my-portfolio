@@ -1,3 +1,5 @@
+import { Badge } from "../ui/badge";
+
 const techStack = {
   languages: [
     "Java",
@@ -36,7 +38,6 @@ const techStack = {
 export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6 max-w-5xl mx-auto">
-
       <h2 className="text-3xl font-bold mb-10">Tech Stack</h2>
 
       {/* Languages */}
@@ -44,12 +45,13 @@ export default function Skills() {
         <h3 className="text-lg font-semibold mb-4">Languages</h3>
         <div className="flex flex-wrap gap-3">
           {techStack.languages.map((tech) => (
-            <span
+            <Badge
               key={tech}
-              className="px-4 py-2 rounded-full bg-muted text-sm"
+              variant="secondary"
+              className="px-3 py-1 text-sm font-medium cursor-default transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-md hover:bg-primary hover:text-primary-foreground"
             >
               {tech}
-            </span>
+            </Badge>
           ))}
         </div>
       </div>
@@ -61,12 +63,13 @@ export default function Skills() {
         </h3>
         <div className="flex flex-wrap gap-3">
           {techStack.frameworks.map((tech) => (
-            <span
+            <Badge
               key={tech}
-              className="px-4 py-2 rounded-full bg-muted text-sm"
+              variant="secondary"
+              className="px-3 py-1 text-sm font-medium cursor-default transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-md hover:bg-primary hover:text-primary-foreground"
             >
               {tech}
-            </span>
+            </Badge>
           ))}
         </div>
       </div>
@@ -78,16 +81,16 @@ export default function Skills() {
         </h3>
         <div className="flex flex-wrap gap-3">
           {techStack.tools.map((tech) => (
-            <span
+            <Badge
               key={tech}
-              className="px-4 py-2 rounded-full bg-muted text-sm"
+              variant="secondary"
+              className="px-3 py-1 text-sm font-medium cursor-default transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-md hover:bg-primary hover:text-primary-foreground"
             >
               {tech}
-            </span>
+            </Badge>
           ))}
         </div>
       </div>
-
     </section>
   );
 }
