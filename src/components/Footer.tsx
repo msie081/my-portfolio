@@ -1,3 +1,4 @@
+import { Button } from "./ui/button";
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -15,26 +16,20 @@ export default function Footer() {
         </div>
 
         {/* Back to top */}
-        <button
-          onClick={scrollToTop}
-          className="flex items-center gap-2 text-sm font-medium hover:text-primary transition"
+        <Button variant="secondary"
+        onClick={scrollToTop}
+        className="flex items-center gap-2"
         >
-          Back to top
+        Back to top
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 15l-6-6-6 6" />
-          </svg>
-        </button>
+        <img
+            src="/icons/arrow-up.svg"
+            alt=""
+            className="w-4 h-4 transition-transform duration-200 group-hover:-translate-y-0.5"
+        />
+        </Button>
+
+        
 
       </div>
     </footer>

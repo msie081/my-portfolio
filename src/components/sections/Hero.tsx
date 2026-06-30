@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import DownloadCV from "../ui/downloadCV";
 
 export default function Hero() {
   return (
@@ -12,8 +13,10 @@ export default function Hero() {
       </p>
 
       <div className="mt-6 flex gap-4">
-        <Button>View Projects</Button>
-        <Button variant="outline">Contact Me</Button>
+        <Button asChild>
+          <a href="#projects">View Projects</a>
+        </Button>
+        <DownloadCV />
       </div>
     </section>
   );

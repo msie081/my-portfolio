@@ -4,7 +4,6 @@ import {
   NavigationMenuList,
 } from "../ui/navigation-menu";
 
-import DownloadCV from "../ui/downloadCV";
 
 export default function Navbar() {
   return (
@@ -47,10 +46,7 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Right side button */}
-      <div className="flex items-center">
-        <DownloadCV />
-      </div>
+     
 
     </div>
   );
