@@ -1,6 +1,14 @@
 import { useState } from "react";
+import { Button } from "../ui/button";
 
 export default function Contact() {
+
+
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [copied, setCopied] = useState(false);
 
   const email = "melissatsieu2@email.com";
@@ -82,8 +90,24 @@ export default function Contact() {
           />
         </a>
 
+        
       </div>
+        <div className="flex justify-center">
+        <Button
+          variant="secondary"
+          onClick={scrollToTop}
+          className="flex items-center gap-2 group"
+        >
+          Back to top
 
+          <img
+            src="/icons/arrow-up.svg"
+            alt=""
+            className="w-4 h-4 transition-transform duration-200 group-hover:-translate-y-0.5"
+          />
+        </Button>
+      </div>
+        
 
     </section>
   );
