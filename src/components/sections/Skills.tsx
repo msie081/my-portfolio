@@ -43,7 +43,7 @@ export default function Skills() {
       {/* Languages */}
       <div className="mb-10">
         <h3 className="text-lg font-semibold mb-4">Languages</h3>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-4">
           {techStack.languages.map((tech) => (
             <Badge
               key={tech}
@@ -61,7 +61,7 @@ export default function Skills() {
         <h3 className="text-lg font-semibold mb-4">
           Frameworks & Libraries
         </h3>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-4">
           {techStack.frameworks.map((tech) => (
             <Badge
               key={tech}
@@ -79,7 +79,7 @@ export default function Skills() {
         <h3 className="text-lg font-semibold mb-4">
           Tools & Databases
         </h3>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-4">
           {techStack.tools.map((tech) => (
             <Badge
               key={tech}
