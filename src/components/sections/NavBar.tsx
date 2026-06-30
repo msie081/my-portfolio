@@ -3,11 +3,14 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "../ui/navigation-menu";
+
 import DownloadCV from "../ui/downloadCV";
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-center py-4 fixed top-0 bg-background/80 backdrop-blur border-b z-50">
+    <div className="w-full flex justify-between items-center px-10 py-4 fixed top-0 bg-background/80 backdrop-blur border-b z-50">
+
+      {/* Left / Center nav */}
       <NavigationMenu>
         <NavigationMenuList className="flex gap-6">
 
@@ -41,11 +44,14 @@ export default function Navbar() {
             </a>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <DownloadCV />
-          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+
+      {/* Right side button */}
+      <div className="flex items-center">
+        <DownloadCV />
+      </div>
+
     </div>
   );
 }

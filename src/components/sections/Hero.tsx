@@ -8,7 +8,7 @@ export default function Hero() {
       </h1>
 
       <p className="text-xl text-muted-foreground max-w-xl">
-        Software Developer focused on building clean, modern web apps and UX-focused systems.
+        Graduate Software Developer focused on building clean, modern web apps and UX-focused systems.
       </p>
 
       <div className="mt-6 flex gap-4">
