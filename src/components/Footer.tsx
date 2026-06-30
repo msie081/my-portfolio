@@ -11,7 +11,7 @@ export default function Footer() {
 
         {/* Left text */}
         <div className="text-sm text-muted-foreground text-center md:text-left">
-          <p>Melissa © 2026</p>
+          <p>Melissa Sieu © 2026</p>
           <p className="text-xs mt-1">Built with React + Vite</p>
         </div>
 
